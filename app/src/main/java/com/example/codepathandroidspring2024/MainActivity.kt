@@ -64,6 +64,7 @@ class MainActivity : AppCompatActivity() {
                     tvAnswer.visibility = View.INVISIBLE
                     answer = FourLetterWordList.getRandomFourLetterWord()
                     tvAnswer.text = answer
+                    etUserGuess.text.clear()
                     for(guess in arrayOfGuesses.indices){
                         arrayOfGuesses[guess].text = ""
                     }
@@ -88,11 +89,12 @@ class MainActivity : AppCompatActivity() {
                     tvAnswer.visibility = View.INVISIBLE
                     answer = FourLetterWordList.getRandomFourLetterWord()
                     tvAnswer.text = FourLetterWordList.getRandomFourLetterWord()
+                    etUserGuess.text.clear()
                     for(guess in arrayOfGuesses.indices){
                         arrayOfGuesses[guess].text = ""
                     }
                     for(checks in arrayOfGuessChecks.indices){
-                        arrayOfGuesses[checks].text = ""
+                        arrayOfGuessChecks[checks].text = ""
                     }
                 }
             }
