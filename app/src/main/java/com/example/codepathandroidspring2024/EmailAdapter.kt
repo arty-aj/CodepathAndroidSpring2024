@@ -21,9 +21,9 @@ class EmailAdapter(private val emails: List<Email>) : RecyclerView.Adapter<Email
         init {
             //Store each of the layouts views into
             //the public final member variables created above
-            senderTextView.findViewById<TextView>(R.id.tvSender)
-            titleTextView.findViewById<TextView>(R.id.tvTitle)
-            summaryTextView.findViewById<TextView>(R.id.tvSummary)
+            senderTextView = itemView.findViewById(R.id.tvSender)
+            titleTextView = itemView.findViewById(R.id.tvTitle)
+            summaryTextView = itemView.findViewById(R.id.tvSummary)
         }
     }
 
