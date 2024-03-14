@@ -3,33 +3,37 @@ package com.example.codepathandroidspring2024
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class WishlistAdapter(private val wish: List<Item>) : RecyclerView.Adapter<WishlistAdapter.ViewHolder>() {
+class WishlistAdapter(private val wishes: List<Wish>) : RecyclerView.Adapter<WishlistAdapter.ViewHolder>() {
     //Holds views
     class ViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView){
-        private val itemName: EditText
-        private val itemCost: EditText
-        private val itemURL: EditText
+         val itemName: TextView
+         val itemCost: TextView
+         val itemURL: TextView
         init {
-            itemName = itemView.findViewById(R.id.etItemName)
-            itemCost = itemView.findViewById(R.id.etItemCost)
-            itemURL = itemView.findViewById(R.id.etItemURL)
+            itemName = itemView.findViewById(R.id.tvItemName)
+            itemCost = itemView.findViewById(R.id.tvItemCost)
+            itemURL = itemView.findViewById(R.id.tvItemURL)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val context = parent.context
         val inflater = LayoutInflater.from(context)
-        TODO("Not yet implemented")
+        val wishlistView = inflater.inflate(R.layout.wishlist_item, parent, false)
+        return ViewHolder(wishlistView)
     }
 
     override fun getItemCount(): Int {
-        return wish.size
+        return wishes.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val wish = wishes[position]
+        holder.itemCost.text = wish.itemCost
+        holder.itemName.text = wish.itemName
+        holder.itemURL.text = wish.itemURL
     }
 }

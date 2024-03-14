@@ -16,7 +16,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
@@ -28,11 +27,11 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/RvWishlist"
-        app:layout_constraintVertical_bias="0.877">
+        app:layout_constraintVertical_bias="0.875">
 
         <EditText
             android:id="@+id/etItemName"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_weight="1"
@@ -49,7 +48,7 @@
             android:layout_gravity="end"
             android:layout_weight="1"
             android:hint="Ex 1.99"
-            android:inputType="number"/>
+            android:inputType="number" />
     </LinearLayout>
 
     <LinearLayout

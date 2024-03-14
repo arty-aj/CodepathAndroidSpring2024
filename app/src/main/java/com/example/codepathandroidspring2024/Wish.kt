@@ -1,7 +1,7 @@
 package com.example.codepathandroidspring2024
 
-data class Item(
+data class Wish(
     val itemName: String,
-    val itemCost : Int,
+    val itemCost : String,
     val itemURL : String
 )
