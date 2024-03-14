@@ -48,7 +48,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_weight="1"
-            android:hint="Ex 1.99" />
+            android:hint="Ex 1.99"
+            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
